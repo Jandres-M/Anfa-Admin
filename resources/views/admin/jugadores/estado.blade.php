@@ -1,0 +1,25 @@
+@extends('app')
+
+@section('title', 'Cambiar estado de jugador '.$jugador->nombres.' '.$jugador->apellidoPaterno.' '.$jugador->apellidoMaterno. ' | '.$jugador->pivot->estado)
+
+@section('content')
+	{!! Form::open(['route' => ['admin.jugadores.update_estado', $jugador],'method' => 'PUT']) !!}
+
+		
+		
+
+		<div class="form-group">
+			{!! Form::label('estado', 'Tipo de estado') !!}
+			{!! Form::select('estado', ['Habilitado' => 'Habilitado', 'Deshabilitado' => 'Deshabilitado'], $jugador->pivot->estado, ['class' => 'form-control']) !!}
+		</div>
+
+		<!--el habilitado debe ir por defecto-->
+
+		
+
+		<div class="form-group">
+			{!! Form::submit('Alterar estado', ['class' => 'btn btn-primary']) !!}
+		</div>
+
+	{!! Form::close() !!}
+@endsection

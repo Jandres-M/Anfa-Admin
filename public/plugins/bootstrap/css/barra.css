@@ -1,0 +1,16 @@
+.navbar-inverse {
+  background-color: #0A2B3A;
+  border-color: #080808;
+}
+
+.navbar-inverse .navbar-text {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #9d9d9d;
+  background-color: transparent;
+}
